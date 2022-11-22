@@ -1,0 +1,48 @@
+.header {
+  &__content {
+    @include flexSpaceBetween;
+    align-items: center;
+    max-width: 1366px;
+    height: 94px;
+    margin: 0 auto;
+    padding: 0 50px 0 53px;
+
+    @include onMobile {
+      padding: 0 24px 0 27px;
+    }
+  }
+
+  &__menu,
+  &__logo {
+    width: 33%;
+  }
+
+  &__logo {
+    @include onMobile {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    width: 124px;
+    height: 38px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    background: $pink;
+    border-radius: 25px;
+
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: $pink-hover;
+    }
+
+    @include onMobile {
+      display: none;
+    }
+  }
+}

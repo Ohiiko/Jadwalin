@@ -1,0 +1,21 @@
+.page {
+  min-height: 100vh;
+  min-width: 328px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+
+  &__body {
+    background: linear-gradient(
+      180deg,
+      $light-blue 0%,
+      $light-red 44%,
+      $blue 100%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__header {
+    margin-bottom: 41px;
+  }
+}

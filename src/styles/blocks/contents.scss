@@ -1,0 +1,106 @@
+.contents {
+  &__container {
+    margin: 0 auto;
+    margin-bottom: 90px;
+
+    @include flexSpaceBetween;
+    align-items: flex-end;
+
+    @include onTable {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 584px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    padding-bottom: 25px;
+    color: $dark-blue;
+
+    @include onTable {
+      text-align: center;
+      padding: 0 16px 20px;
+    }
+
+    @include onMobile {
+      display: flex;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $gray;
+
+    @include onTable {
+      padding: 0 16px 37px;
+    }
+  }
+
+  &__buttons {
+    width: 220px;
+    height: 44px;
+    @include flexSpaceBetween;
+    background-color: $white-50;
+    border-radius: 22px;
+    margin-right: 10px;
+  }
+}
+
+#check {
+  display: none;
+
+  & + .contents__label {
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    height: 44px;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &::before {
+      display: block;
+      content: attr(data-offlabel);
+      position: absolute;
+      top: 13px;
+      right: 31px;
+      text-transform: uppercase;
+      @include toggleButton;
+      color: $dark-blue;
+    }
+
+    &::after {
+      content: attr(data-onlabel);
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      @include flexCenter;
+      @include toggleButton;
+      color: $white;
+      background-color: $pink;
+    }
+  }
+
+  &:checked + .contents__label::before {
+    content: attr(data-onlabel);
+    top: 13px;
+    left: 24px;
+    color: $dark-blue;
+  }
+
+  &:checked + .contents__label::after {
+    content: attr(data-offlabel);
+    @include flexCenter;
+    @include toggleButton;
+    color: $white;
+    left: 111px;
+    background-color: $pink;
+  }
+}

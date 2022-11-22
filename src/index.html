@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwalin</title>
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="./images/favicon.svg"
+  >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.scss">
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body class="page__body">
+    <header class="page__header header">
+      <div class="header__content">
+        <div class="header__menu">
+          <a href="#" class="header__menu-link">
+            <img
+              src="./images/menu.svg"
+              class="header__menu-img"
+              alt="Menu"
+            >
+          </a>
+        </div>
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">
+            <img
+              src="./images/logo-frame.svg"
+              class="header__logo-img"
+              alt="Jadwalin"
+            >
+          </a>
+        </div>
+        <button class="header__button button">Join Now</button>
+      </div>
+    </header>
+
+    <main class="page__main">
+      <div class="container">
+        <section class="contents">
+          <div class="contents__container">
+            <div class="contents__info">
+              <h1 class="contents__title">Plans & Pricing</h1>
+              <p class="contents__text">
+                Whether your time-saving automation needs are large or small,
+                we're here to help you scale.
+              </p>
+            </div>
+            <div class="contents__buttons">
+              <input
+                type="checkbox"
+                id="check"
+                name="check"
+              >
+              <label
+                for="check"
+                id="toggle"
+                data-onlabel="Monthly"
+                data-offlabel="Yearly"
+                class="contents__label"
+              ></label>
+            </div>
+          </div>
+        </section>
+
+        <sections class="price">
+          <div class="price__container">
+            <article class="price-card">
+              <div class="price-card__content">
+                <div class="price-card__cost">
+                  <span class="price-card__value" id="price-starter">$19</span>
+                  <span class="price-card__period">/month</span>
+                </div>
+                <h2 class="price-card__title">Starter</h2>
+                <div class="price-card__text">Unleash the power of automation.</div>
+                <ul class="price-card__list">
+                  <li class="price-card__item">Multi-step Zaps</li>
+                  <li class="price-card__item">3 Premium Apps</li>
+                  <li class="price-card__item">2 Users team</li>
+                </ul>
+              </div>
+              <button class="price-card__button button">Choose plan</button>
+            </article>
+
+            <article class="price-card">
+              <div class="price-card__content">
+                <div class="price-card__cost">
+                  <span class="price-card__value" id="price-professional">$54</span>
+                  <span class="price-card__period">/month</span>
+                </div>
+                <h2 class="price-card__title">Professional</h2>
+                <div class="price-card__text">Advanced tools to take your work to the next level.</div>
+                <ul class="price-card__list">
+                  <li class="price-card__item">Multi-step Zaps</li>
+                  <li class="price-card__item">Unlimited Premium Apps</li>
+                  <li class="price-card__item">50 Users team</li>
+                  <li class="price-card__item">Shared Workspace</li>
+                </ul>
+              </div>
+              <button class="price-card__button button">Choose plan</button>
+            </article>
+
+            <article class="price-card price-card--popular">
+              <div class="price-card__content">
+                <div class="price-card__popular">
+                  <span class="price-card__most-popular">MOST POPULAR</span>
+                </div>
+                <div class="price-card__cost">
+                  <span class="price-card__value price-card__value--popular" id="price-company">
+                  $89
+                  </span>
+                  <span class="price-card__period price-card__period--popular">/month</span>
+                </div>
+                <h2 class="price-card__title price-card__title--popular">Company</h2>
+                <div class="price-card__text">Automation plus enterprise-grade features.</div>
+                <ul class="price-card__list price-card__list--popular">
+                  <li class="price-card__item price-card__item--popular">Multi-step Zaps</li>
+                  <li class="price-card__item price-card__item--popular">Unlimited Premium Apps</li>
+                  <li class="price-card__item price-card__item--popular">Unlimited Users Team</li>
+                  <li class="price-card__item price-card__item--popular">Advanced Admin</li>
+                  <li class="price-card__item price-card__item--popular">Custom Data Retention</li>
+                </ul>
+              </div>
+              <button class="price-card__button price-card__button--popular button">
+                Choose plan
+              </button>
+            </article>
+          </div>
+        </sections>
+      </div>
+    </main>
+  </body>
+</html>

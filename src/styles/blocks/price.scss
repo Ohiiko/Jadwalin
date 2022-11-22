@@ -1,0 +1,21 @@
+.price {
+  &__container {
+    max-width: 937px;
+    height: 467px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.64);
+    border-radius: 26px;
+    padding: 20px 45px;
+    margin-bottom: 69px;
+
+    @include onTable {
+      max-width: 288px;
+      height: 1325px;
+      flex-direction: column;
+      margin: 0 auto;
+      align-items: center;
+      padding: 8px;
+      margin-bottom: 64px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.price-card {
+  width: 33%;
+  height: 100%;
+  padding: 20px 30px;
+  color: $gray;
+  font-weight: 500;
+  @include flexSpaceBetween;
+  flex-direction: column;
+
+  @include onTable {
+    width: 272px;
+    padding: 24px 20px;
+    justify-content: initial;
+  }
+
+  &__popular {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+
+    @include onTable {
+      justify-content: center;
+    }
+  }
+
+  &__most-popular {
+    width: 121px;
+    height: 27px;
+    @include flexCenter;
+    background: #403879;
+    border-radius: 13.5px;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.83px;
+
+    color: $pink;
+  }
+
+  &--popular {
+    height: 473px;
+    color: $white;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    bottom: 48px;
+    box-shadow: 0 42px 34px rgba(82, 67, 194, 0.3);
+    border-radius: 26px;
+
+    @include onTable {
+      position: static;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__cost {
+    padding-bottom: 20px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    color: $dark-blue;
+
+    &--popular {
+      color: $white;
+    }
+  }
+
+  &__period {
+    font-size: 17px;
+    line-height: 26px;
+
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 42px;
+    color: $dark-blue;
+    padding-bottom: 6px;
+
+    &--popular {
+      color: $white;
+    }
+  }
+
+  &__text {
+    padding-bottom: 14px;
+  }
+
+  &__list {
+    list-style-type: none;
+
+    @include onTable {
+      padding-bottom: 38px;
+    }
+
+    &--popular {
+      @include onTable {
+        padding-bottom: 22px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 0 8px 30px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-image: url("/images/check-circle-1.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--popular {
+      &::before {
+        background-image: url("/images/check-circle-2.svg");
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 45px;
+    background-color: $dark-blue;
+    mix-blend-mode: normal;
+    border-radius: 24px;
+    text-align: center;
+    color: $white;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $pink-hover;
+    }
+
+    &--popular {
+      background-color: $pink;
+    }
+  }
+}
